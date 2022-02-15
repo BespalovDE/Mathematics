@@ -1,4 +1,4 @@
-﻿// LW1.6.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// LW1.6.cpp : Алгоритм порождения всех подмножеств множества из n элементов.
 //
 
 #include <iostream>
@@ -20,7 +20,9 @@ void ShowVectorSet(const std::vector<size_t> &f, const std::vector<size_t> &v)
 void Solve(std::vector<size_t>& f, std::vector<size_t>& v)
 {
     int i = 0;
-    while (v[f.size() - 1] != 1)
+    int sum_of_elems = 0;
+    while (v[v.size() - 1] != 1)
+    //while (sum_of_elems < f.size())
     {
         ShowVectorSet(f, v);
         i = 0;
@@ -30,17 +32,21 @@ void Solve(std::vector<size_t>& f, std::vector<size_t>& v)
             i++;
         }
         v[i] = 1;
+    /*    sum_of_elems = 0;
+        for (auto& n : v)
+            sum_of_elems += n;*/
     }
+    /*ShowVectorSet(f, v);*/
 }
 
 int main()
 {
     int n = 10;
-    std::vector<size_t> f = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; // 10
-    /*int n = 20;
-    std::vector<size_t> f = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 }; // 20*/
+    std::vector<size_t> f = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; // 10   0 - без вывода в консоль; 0,165 - с выводом в консоль
+    //int n = 20;
+    //std::vector<size_t> f = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 }; // 20   0,007 - без вывода в консоль; 313,901 - с выводом в консоль
     std::vector<size_t> v;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n + 1; i++)
     {
         v.push_back(0);
     }

@@ -1,4 +1,4 @@
-﻿// LW1.7.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿// LW1.7.cpp : Алгоритм порождения копозиции положительного числа n в последовательности неотрицательных чисел {z1,z2,...,zk}, z1+z2+...+zk=n. Учитывается порядок чисел zj и zj > 0.
 //
 
 #include <iostream>
@@ -78,7 +78,7 @@ void Solve(std::vector<size_t>& v, const int& startSum)
 
 int main()
 {
-    int number = 15;
+    int number = 25;
     std::vector<size_t> v;
     for (int i = 0; i < number; i++)
     {

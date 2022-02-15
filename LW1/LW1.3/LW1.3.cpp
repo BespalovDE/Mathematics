@@ -1,5 +1,4 @@
-﻿// LW1.3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+﻿// LW1.3.cpp : Алгоритм порождения случайной перестановки
 #include <math.h>
 #include <iostream>
 #include <vector>
@@ -30,7 +29,7 @@ int main()
     std::vector<size_t> v = { 7, 1, 12, 5, 9, 20, 15, 6, 3, 13, 17, 21, 2, 8, 32 }; // 15
     copy(v.begin(), v.end(), std::ostream_iterator<size_t>(std::cout, " "));
     std::cout << std::endl;
-    for (int k = 1; k < 3; k++)// rounds
+    for (int k = 1; k < 3; k++) // количество проходов
     {
         int i = 0;
         while (i < 15)
