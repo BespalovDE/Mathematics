@@ -12,8 +12,8 @@ void ShowStep(const std::vector<size_t>& v)
 
 int main()
 {
-    //int n = 10; // 0.049
-    int n = 15; // 0.049
+    //int n = 10; // 0.018   11 - 0,2  12 - 2,3   13 - 29,897   14 - 417,473  => 15 - 6262.095  20 - 11.65*10^9   50 - 1.456*10^55   100 - 4.469*10^148
+    int n = 10; // 0.018
     std::vector<size_t> p;
     std::vector<size_t> d;
     std::vector<size_t> r;
